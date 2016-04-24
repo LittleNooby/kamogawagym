@@ -34,7 +34,7 @@ body {
 	height: 0;
 	border-width: 0px;
 	border-style: solid;
-	border-color: nth($themeColor, 2);
+	border-color: lighten( nth($themeColor, 5), 5%);
 	// black but transparent so not visible until menu opens (bt-menu-open)
 	background-color: rgba(0,0,0,0); // Black but 100% transparent
 	-webkit-backface-visibility: hidden;
@@ -44,11 +44,16 @@ body {
 }
 .bt-menu.bt-menu-open {
 	height: 100%;
-	border-width: 0px 0px 50px 150px; // Menu background
+	border-width: 30px 30px 50px 150px; // Menu background
 	background-color: rgba(0,0,0,0.3); // a transparent curtain over full page
 	-webkit-transition: border-width 0.3s, background-color 0.3s;
 	transition: border-width 0.3s, background-color 0.3s;
 }
+// TODO Apply on a container covering the whole page except the border : trick, use dommy
+/*.bt-overlay {
+	position: absolute;
+	width: 100%;
+}*/
 
 .bt-menu-trigger {
 }

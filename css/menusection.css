@@ -31,7 +31,7 @@ body {
   height: 0;
   border-width: 0px;
   border-style: solid;
-  border-color: #FCE300;
+  border-color: #f36946;
   background-color: transparent;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -42,8 +42,13 @@ body {
 /* line 45, ../scss/menusection.scss */
 .bt-menu.bt-menu-open {
   height: 100%;
-  border-width: 0px 0px 50px 150px;
+  border-width: 30px 30px 50px 150px;
   background-color: rgba(0, 0, 0, 0.3);
   -webkit-transition: border-width 0.3s, background-color 0.3s;
   transition: border-width 0.3s, background-color 0.3s;
 }
+
+/*.bt-overlay {
+	position: absolute;
+	width: 100%;
+}*/
