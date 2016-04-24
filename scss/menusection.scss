@@ -16,7 +16,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }//*/
-// Not sure I need this
+// Not sure I need this. It applies to <nav> thou
 
 $themeColor: #45D0F2, #FCE300, #F5CB02, #EFBB07, #F2562E;
 
@@ -28,6 +28,19 @@ body {
 }
 
 .bt-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	border-width: 0px;
+	border-style: solid;
+	border-color: nth($themeColor, 1);
+	background-color: rgba(0,0,0,0); // applies transparence
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+	transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+	//I may need to add the webkit attribute without webkit to ensure compatibility with firefox
 }
 
 .bt-menu-trigger {
