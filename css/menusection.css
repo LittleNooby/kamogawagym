@@ -3,25 +3,26 @@
   * MODIFIED : 24-04-16
   */
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-/*
+/* line 12, ../scss/menusection.scss */
 *,
 *:after,
 *::before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}//*/
-/* line 23, ../scss/menusection.scss */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 22, ../scss/menusection.scss */
 body {
   background: #F2562E;
 }
 
-/* line 26, ../scss/menusection.scss */
+/* line 25, ../scss/menusection.scss */
 .container {
   padding: 80px;
 }
 
-/* line 30, ../scss/menusection.scss */
+/* line 29, ../scss/menusection.scss */
 .bt-menu {
   position: fixed;
   top: 0;
@@ -30,9 +31,19 @@ body {
   height: 0;
   border-width: 0px;
   border-style: solid;
-  border-color: #45D0F2;
+  border-color: #FCE300;
   background-color: transparent;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
   transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+}
+
+/* line 45, ../scss/menusection.scss */
+.bt-menu.bt-menu-open {
+  height: 100%;
+  border-width: 0px 0px 50px 150px;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-transition: border-width 0.3s, background-color 0.3s;
+  transition: border-width 0.3s, background-color 0.3s;
 }

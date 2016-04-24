@@ -8,15 +8,14 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
 // Merge border, padding and content so the final size of the three is content size
-/*
+// bottom nav border won't appear without it
 *,
 *:after,
 *::before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}//*/
-// Not sure I need this. It applies to <nav> thou
+}
 
 $themeColor: #45D0F2, #FCE300, #F5CB02, #EFBB07, #F2562E;
 
@@ -35,12 +34,20 @@ body {
 	height: 0;
 	border-width: 0px;
 	border-style: solid;
-	border-color: nth($themeColor, 1);
-	background-color: rgba(0,0,0,0); // applies transparence
+	border-color: nth($themeColor, 2);
+	// black but transparent so not visible until menu opens (bt-menu-open)
+	background-color: rgba(0,0,0,0); // Black but 100% transparent
 	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 	-webkit-transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
 	transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
-	//I may need to add the webkit attribute without webkit to ensure compatibility with firefox
+}
+.bt-menu.bt-menu-open {
+	height: 100%;
+	border-width: 0px 0px 50px 150px; // Menu background
+	background-color: rgba(0,0,0,0.3); // a transparent curtain over full page
+	-webkit-transition: border-width 0.3s, background-color 0.3s;
+	transition: border-width 0.3s, background-color 0.3s;
 }
 
 .bt-menu-trigger {
