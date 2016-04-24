@@ -34,7 +34,7 @@ body {
 	height: 0;
 	border-width: 0px;
 	border-style: solid;
-	border-color: lighten( nth($themeColor, 5), 5%);
+	border-color: darken( nth($themeColor, 5), 15%); // MENU BACKGROUND COLOR
 	// black but transparent so not visible until menu opens (bt-menu-open)
 	background-color: rgba(0,0,0,0); // Black but 100% transparent
 	-webkit-backface-visibility: hidden;
