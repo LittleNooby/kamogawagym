@@ -4,6 +4,9 @@ nohup.out
 # vim buffer
 *~
 *.swp
+# vim sessions
+*.vim
 
 # compass buffer
 .sass-cache/
+
