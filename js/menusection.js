@@ -19,12 +19,12 @@
 			},
 			closeClickFn = function( ev ) {
 				resetMenu();
-				//overlay.removeEventListener( eventtype, closeClickFn );
+				overlay.removeEventListener( eventtype, closeClickFn );
 			};
 
-		//var overlay = document.createElement('div');
-		//overlay.className = 'bt-overlay';
-		//menu.appendChild( overlay );
+		var overlay = document.createElement('div');
+		overlay.className = 'bt-overlay';
+		menu.appendChild( overlay );
 
 		trigger.addEventListener( eventtype, function( ev ) {
 			ev.stopPropagation();
@@ -36,7 +36,7 @@
 			else {
 				classie.remove( menu, 'bt-menu-close' );
 				classie.add( menu, 'bt-menu-open' );
-				//overlay.addEventListener( eventtype, closeClickFn );
+				overlay.addEventListener( eventtype, closeClickFn );
 			}
 		});
 

@@ -49,11 +49,17 @@ body {
 	-webkit-transition: border-width 0.3s, background-color 0.3s;
 	transition: border-width 0.3s, background-color 0.3s;
 }
-// TODO Apply on a container covering the whole page except the border : trick, use dommy
-/*.bt-overlay {
+
+/* The following are applied by menusection.js on a div it created itself
+It sole purpose is to isolate an area for a listener, the area being the whole screen except the menu
+The listener closes the menu */
+.bt-overlay {
 	position: absolute;
 	width: 100%;
-}*/
+}
+.bt-menu-open .bt-overlay {
+	height: 100%;
+}
 
 .bt-menu-trigger {
 }
