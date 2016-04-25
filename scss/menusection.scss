@@ -19,6 +19,9 @@
 
 $themeColor: #45D0F2, #FCE300, #F5CB02, #EFBB07, #F2562E;
 
+/**
+  * General Appearance
+  */
 body {
 	background: nth($themeColor, 5);
 }
@@ -26,6 +29,9 @@ body {
 	padding: 80px;
 }
 
+/**
+  * Menu
+  */
 .bt-menu {
 	position: fixed;
 	top: 0;
@@ -63,6 +69,9 @@ The listener closes the menu */
 	height: 100%;
 }
 
+/**
+  * Hamburger
+  */
 // <a> Area for the hamburger menu
 .bt-menu-trigger {
 	position: fixed;
@@ -116,6 +125,9 @@ The listener closes the menu */
 	transform: translateY(250%);
 }
 
+/**
+  * Cross
+  */
 // Center bar hides to let the cross take the place
 .bt-menu-open .bt-menu-trigger span {
 	background-color: transparent;
