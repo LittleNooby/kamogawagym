@@ -120,3 +120,12 @@ The listener closes the menu */
 .bt-menu-open .bt-menu-trigger span {
 	background-color: transparent;
 }
+// Outer bars rotate to form a cross
+.bt-menu-open .bt-menu-trigger span:before {
+	-webkit-transform: translateY(0) rotate(45deg);
+	transform: translateY(0) rotate(45deg);
+}
+.bt-menu-open .bt-menu-trigger span:after {
+	-webkit-transform: translateY(0) rotate(-45deg);
+	transform: translateY(0) rotate(-45deg);
+}
