@@ -48,16 +48,28 @@ body {
   transition: border-width 0.3s, background-color 0.3s;
 }
 
-/* The following are applied by menusection.js on a div it created itself
+/* The following is applied by menusection.js on a div it created itself
 It sole purpose is to isolate an area for a listener, the area being the whole screen except the menu
 The listener closes the menu */
 /* line 56, ../scss/menusection.scss */
 .bt-overlay {
   position: absolute;
   width: 100%;
+  cursor: pointer;
 }
 
-/* line 60, ../scss/menusection.scss */
+/* line 62, ../scss/menusection.scss */
 .bt-menu-open .bt-overlay {
   height: 100%;
+}
+
+/* line 66, ../scss/menusection.scss */
+.bt-menu-trigger {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
 }
