@@ -148,3 +148,40 @@ The listener closes the menu */
   -webkit-transform: translateY(0) rotate(-45deg);
   transform: translateY(0) rotate(-45deg);
 }
+
+/**
+  * Menu items position
+  */
+/* line 148, ../scss/menusection.scss */
+.bt-menu ul {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 155, ../scss/menusection.scss */
+.bt-menu ul:first-of-type {
+  top: 75px;
+  left: 0;
+}
+
+/* line 160, ../scss/menusection.scss */
+.bt-menu ul:nth-of-type(2) {
+  right: 0;
+  bottom: 0;
+}
+
+/* line 165, ../scss/menusection.scss */
+.bt-menu ul:nth-of-type(2) li {
+  float: left;
+}
+
+/**
+  * Menu items animation
+  */
+/* line 173, ../scss/menusection.scss */
+.bt-menu ul li,
+.bt-menu ul li a {
+  display: block;
+}

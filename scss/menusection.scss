@@ -141,3 +141,36 @@ The listener closes the menu */
 	-webkit-transform: translateY(0) rotate(-45deg);
 	transform: translateY(0) rotate(-45deg);
 }
+
+/**
+  * Menu items position
+  */
+.bt-menu ul {
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+// Places section links on the top left
+.bt-menu ul:first-of-type {
+	top: 75px;
+	left: 0;
+}
+// Places social media to the bottom right
+.bt-menu ul:nth-of-type(2) {
+	right: 0;
+	bottom: 0;
+}
+// social media align
+.bt-menu ul:nth-of-type(2) li {
+	float: left;
+	//font-size: 0px; // TODO Add icons and then hide text
+}
+
+/**
+  * Menu items animation
+  */
+.bt-menu ul li,
+.bt-menu ul li a {
+	display: block;
+}
