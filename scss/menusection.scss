@@ -18,6 +18,8 @@
 }
 
 $themeColor: #45D0F2, #FCE300, #F5CB02, #EFBB07, #F2562E;
+$textColor: #fff;
+$textHighlightColor: #999;
 
 /**
   * General Appearance
@@ -164,7 +166,7 @@ The listener closes the menu */
 // social media align
 .bt-menu ul:nth-of-type(2) li {
 	float: left;
-	//font-size: 0px; // TODO Add icons and then hide text
+	font-size: 0px;
 }
 
 /**
@@ -226,3 +228,48 @@ The listener closes the menu */
 	transform: scale(1);
 }
 /* Second menu animation end*/
+
+/**
+  * Styling the menu
+  */
+.bt-menu ul li a {
+	display: block;
+	outline: none;
+	text-decoration: none;
+}
+
+.bt-menu ul:first-of-type li a {
+	padding: 0 20px;
+	box-shadow: inset 0 1px rgba(0,0,0,0.2);
+	color: $textColor;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 1em;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+// line up and down a bit darker because last child is not affecter by bt-menu ul:first-type li a
+.bt-menu ul:first-of-type li:last-child a {
+	box-shadow: inset 0 1px rgba(0,0,0,0.2), inset 0 -1px rgba(0,0,0,0.2);
+}
+
+.bt-menu ul:nth-of-type(2) li a {
+	color: transparent;
+	text-align: center;
+	font-size: 0px; // Makes the container smaller thus the icon
+}
+
+.bt-menu ul li a:before {
+	color: $textColor;
+	font-size: 24px; // Makes the container bigger thus the icon
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+.bt-menu ul:first-of-type li a:hover,
+.bt-menu ul:first-of-type li a:focus,
+.bt-menu ul li a:hover:before,
+.bt-menu ul li a:focus:before {
+	color: $textHighlightColor;
+}
