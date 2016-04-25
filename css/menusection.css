@@ -63,7 +63,7 @@ The listener closes the menu */
   height: 100%;
 }
 
-/* line 66, ../scss/menusection.scss */
+/* line 67, ../scss/menusection.scss */
 .bt-menu-trigger {
   position: fixed;
   top: 15px;
@@ -72,4 +72,55 @@ The listener closes the menu */
   width: 50px;
   height: 50px;
   cursor: pointer;
+}
+
+/* line 77, ../scss/menusection.scss */
+.bt-menu-trigger span {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  top: 50%;
+  left: 0;
+  margin-top: -2px;
+  display: block;
+  background-color: #fff;
+  font-size: 0px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+/* line 98, ../scss/menusection.scss */
+.bt-menu-trigger span:before,
+.bt-menu-trigger span:after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  content: '';
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+/* line 110, ../scss/menusection.scss */
+.bt-menu-trigger span:before {
+  -webkit-transform: translateY(-250%);
+  transform: translateY(-250%);
+}
+
+/* line 114, ../scss/menusection.scss */
+.bt-menu-trigger span:after {
+  -webkit-transform: translateY(250%);
+  transform: translateY(250%);
+}
+
+/* line 120, ../scss/menusection.scss */
+.bt-menu-open .bt-menu-trigger span {
+  background-color: transparent;
 }

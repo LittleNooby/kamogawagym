@@ -63,6 +63,7 @@ The listener closes the menu */
 	height: 100%;
 }
 
+// <a> Area for the hamburger menu
 .bt-menu-trigger {
 	position: fixed;
 	top: 15px;
@@ -71,4 +72,51 @@ The listener closes the menu */
 	width: 50px;
 	height: 50px;
 	cursor: pointer;
+}
+// <span> inside <a> is the hamburger
+.bt-menu-trigger span {
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	top: 50%;
+	left: 0;
+	margin-top: -2px;
+	// placing its top corner at 50% the container minus half its height makes it centered
+	display: block;
+	background-color: #fff; //hamburger bar
+	font-size: 0px; // hide text
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; // ghost text
+	-webkit-transition: background-color 0.3s;
+	transition: background-color 0.3s;
+}
+// Two other bars of the hambuger, made with pseudo-element
+.bt-menu-trigger span:before,
+.bt-menu-trigger span:after {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+// translating the superimposed bars
+.bt-menu-trigger span:before {
+	-webkit-transform: translateY(-250%);
+	transform: translateY(-250%);
+}
+.bt-menu-trigger span:after {
+	-webkit-transform: translateY(250%);
+	transform: translateY(250%);
+}
+
+// Center bar hides to let the cross take the place
+.bt-menu-open .bt-menu-trigger span {
+	background-color: transparent;
 }
