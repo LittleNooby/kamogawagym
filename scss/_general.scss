@@ -1,0 +1,22 @@
+// Merge border, padding and content so the final size of the three is content size
+// bottom nav border won't appear without it
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+	background: $bgColor;
+	color: $textColor;
+}
+.container {
+	padding: 80px;
+}
+
+a,
+a:focus {
+	outline: none;
+}

@@ -7,33 +7,10 @@
 
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
-// Merge border, padding and content so the final size of the three is content size
-// bottom nav border won't appear without it
-*,
-*:after,
-*::before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-$themeColor: #45D0F2, #FCE300, #F5CB02, #EFBB07, #F2562E;
-$textColor: #fff;
-$textHighlightColor: #999;
-
 /**
-  * General Appearance
+  * The trick is that we use the border of the nav element as the menu while its content serve as a curtain over the full page
   */
-body {
-	background: nth($themeColor, 5);
-}
-.container {
-	padding: 80px;
-}
 
-/**
-  * Menu
-  */
 .bt-menu {
 	position: fixed;
 	top: 0;
@@ -42,24 +19,28 @@ body {
 	height: 0;
 	border-width: 0px;
 	border-style: solid;
-	border-color: darken( nth($themeColor, 5), 15%); // MENU BACKGROUND COLOR
+	border-color: $menuColor;
 	// black but transparent so not visible until menu opens (bt-menu-open)
-	background-color: rgba(0,0,0,0); // Black but 100% transparent
+	background-color: $curtainColor; // Curtain color
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	-webkit-transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
 	transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
 }
+
 .bt-menu.bt-menu-open {
 	height: 100%;
-	border-width: 30px 30px 50px 150px; // Menu background
-	background-color: rgba(0,0,0,0.3); // a transparent curtain over full page
+	border-width: 25px 25px 50px 150px;
+	background-color: opacify( $curtainColor, 0.3); // a transparent curtain over full page
 	-webkit-transition: border-width 0.3s, background-color 0.3s;
 	transition: border-width 0.3s, background-color 0.3s;
 }
 
+/**
+  * Curtain
+  */
 /* The following is applied by menusection.js on a div it created itself
-It sole purpose is to isolate an area for a listener, the area being the whole screen except the menu
+It sole purpose is to isolate nav content
 The listener closes the menu */
 .bt-overlay {
 	position: absolute;
@@ -160,7 +141,7 @@ The listener closes the menu */
 }
 // Places social media to the bottom right
 .bt-menu ul:nth-of-type(2) {
-	right: 0;
+	right: 20px;
 	bottom: 0;
 }
 // social media align
@@ -241,7 +222,7 @@ The listener closes the menu */
 .bt-menu ul:first-of-type li a {
 	padding: 0 20px;
 	box-shadow: inset 0 1px rgba(0,0,0,0.2);
-	color: $textColor;
+	color: $menuLinksColor;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size: 1em;
@@ -261,7 +242,7 @@ The listener closes the menu */
 }
 
 .bt-menu ul li a:before {
-	color: $textColor;
+	color: $menuLinksColor;
 	font-size: 24px; // Makes the container bigger thus the icon
 	-webkit-transition: color 0.2s;
 	transition: color 0.2s;
@@ -271,5 +252,5 @@ The listener closes the menu */
 .bt-menu ul:first-of-type li a:focus,
 .bt-menu ul li a:hover:before,
 .bt-menu ul li a:focus:before {
-	color: $textHighlightColor;
+	color: $highlightColor;
 }
