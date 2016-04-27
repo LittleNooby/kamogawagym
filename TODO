@@ -3,7 +3,6 @@ BASIC
 LINEAR
 	VIDEO slider best moments
 	RESPONSIVE : lesser section padding
-	RESPONSIVE : center brand icon
 	_section.scss box-shadow property should inherit parent background
 ENTHOUSIAST
 	ADD link top right to the manga with book icon
