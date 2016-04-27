@@ -25,6 +25,7 @@ $logoDiameter : 200px;
 .logo span {
 	font-size: $logoDiameter * 3 / 8;
 	padding-right: $logoDiameter - ( $logoDiameter * 3 / 8) / 4;
+	line-height: $logoDiameter; 
 }
 
 header h1 {
