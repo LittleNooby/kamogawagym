@@ -1,0 +1,28 @@
+/**
+  * This contain classes which affect only specific elements
+  */
+
+
+$logoDiameter : 200px;
+.logo {
+	// Circle
+	background: $bgColor;
+	width: $logoDiameter;
+	height: $logoDiameter;
+	border-radius: $logoDiameter / 2;
+	// Japanses reading direction
+	ms-writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
+	-moz-writing-mode: vertical-rl;
+	-ms-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+	-webkit-text-orientation: upright;
+	-moz-text-orientation: upright;
+	-ms-text-orientation: upright;
+	text-orientation: upright;
+}
+
+.logo span {
+	font-size: $logoDiameter * 3 / 8;
+	padding-right: $logoDiameter - ( $logoDiameter * 3 / 8) / 4;
+}

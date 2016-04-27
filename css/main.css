@@ -531,3 +531,29 @@ section::after {
 .roundedges-separator::after {
   right: -100px;
 }
+
+/**
+  * This contain classes which affect only specific elements
+  */
+/* line 7, ../scss/_targeted.scss */
+.logo {
+  background: #F2562E;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  -webkit-text-orientation: upright;
+  -moz-text-orientation: upright;
+  -ms-text-orientation: upright;
+  text-orientation: upright;
+}
+
+/* line 25, ../scss/_targeted.scss */
+.logo span {
+  font-size: 75px;
+  padding-right: 181.25px;
+}
