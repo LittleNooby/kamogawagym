@@ -397,30 +397,33 @@ header {
 }
 
 /* line 25, ../scss/_sections.scss */
+footer,
 section {
   padding: 160px 80px;
   position: relative;
 }
 
-/* line 29, ../scss/_sections.scss */
+/* line 30, ../scss/_sections.scss */
 footer {
   padding: 20px 80px 0px 80px;
   text-align: center;
 }
 
 /* Section color alternance */
-/* line 35, ../scss/_sections.scss */
+/* line 36, ../scss/_sections.scss */
 .color-separator:nth-child(odd) {
   background: #F2562E;
 }
 
-/* line 38, ../scss/_sections.scss */
+/* line 39, ../scss/_sections.scss */
 .color-separator:nth-child(even) {
   background: #ee3c0f;
 }
 
 /* Common style for pseudo-elements */
-/* line 43, ../scss/_sections.scss */
+/* line 44, ../scss/_sections.scss */
+footer::before,
+footer::after,
 section::before,
 section::after {
   position: absolute;
@@ -428,13 +431,13 @@ section::after {
   pointer-events: none;
 }
 
-/* line 49, ../scss/_sections.scss */
+/* line 52, ../scss/_sections.scss */
 section::after {
   z-index: 1;
 }
 
 /* Triangles */
-/* line 54, ../scss/_sections.scss */
+/* line 57, ../scss/_sections.scss */
 .triangles-separator::before,
 .triangles-separator::after {
   left: 50%;
@@ -444,14 +447,87 @@ section::after {
   transform: translateX(-50%) rotate(45deg);
 }
 
-/* line 63, ../scss/_sections.scss */
+/* line 66, ../scss/_sections.scss */
 .triangles-separator::before {
   top: -50px;
   background: inherit;
 }
 
-/* line 68, ../scss/_sections.scss */
+/* line 71, ../scss/_sections.scss */
 .triangles-separator::after {
   bottom: -50px;
   background: inherit;
+}
+
+/* Triple Triangles */
+/* line 77, ../scss/_sections.scss */
+.triple-triangles-separator::before,
+.triple-triangles-separator::after {
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* line 86, ../scss/_sections.scss */
+.triple-triangles-separator::before {
+  top: -25px;
+  background: inherit;
+  box-shadow: -50px 50px 0, 50px -50px 0;
+  color: #F2562E;
+}
+
+/* line 93, ../scss/_sections.scss */
+.triple-triangles-separator::after {
+  bottom: -25px;
+  background: inherit;
+  box-shadow: -50px 50px 0, 50px -50px 0;
+  color: #F2562E;
+}
+
+/* Half Circle */
+/* line 101, ../scss/_sections.scss */
+.halfcircle-separator::before,
+.halfcircle-separator::after {
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: inherit;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/* line 112, ../scss/_sections.scss */
+.halfcircle-separator::before {
+  top: -50px;
+}
+
+/* line 116, ../scss/_sections.scss */
+.halfcircle-separator::after {
+  bottom: -50px;
+}
+
+/* Edges */
+/* line 121, ../scss/_sections.scss */
+.roundedges-separator::before,
+.roundedges-separator::after {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: inherit;
+  top: -100px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* line 132, ../scss/_sections.scss */
+.roundedges-separator::before {
+  left: -100px;
+}
+
+/* line 136, ../scss/_sections.scss */
+.roundedges-separator::after {
+  right: -100px;
 }

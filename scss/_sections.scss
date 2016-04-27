@@ -22,6 +22,7 @@ header {
 	padding:88px 32px 112px 32px;
 	text-align: center;
 }
+footer,
 section {
 	padding: 160px 80px; 
 	position: relative;
@@ -40,6 +41,8 @@ footer {
 }
 
 /* Common style for pseudo-elements */
+footer::before,
+footer::after,
 section::before,
 section::after {
 	position: absolute;
@@ -68,4 +71,68 @@ section::after {
 .triangles-separator::after {
 	bottom: -50px;
 	background: inherit;
+}
+
+/* Triple Triangles */
+.triple-triangles-separator::before,
+.triple-triangles-separator::after {
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	-webkit-transform: translateX(-50%) rotate(45deg);
+	transform: translateX(-50%) rotate(45deg);
+}
+
+.triple-triangles-separator::before {
+	top: -25px;
+	background: inherit;
+	box-shadow: -50px 50px 0, 50px -50px 0;
+	color: $bgColor;
+}
+
+.triple-triangles-separator::after {
+	bottom: -25px;
+	background: inherit;
+	box-shadow: -50px 50px 0, 50px -50px 0;
+	color: $bgColor;
+}
+
+/* Half Circle */
+.halfcircle-separator::before,
+.halfcircle-separator::after {
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: inherit;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.halfcircle-separator::before {
+	top: -50px;
+}
+
+.halfcircle-separator::after {
+	bottom: -50px;
+}
+
+/* Edges */
+.roundedges-separator::before,
+.roundedges-separator::after {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: inherit;
+	top: -100px;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.roundedges-separator::before {
+	left: -100px;
+}
+
+.roundedges-separator::after {
+	right: -100px;
 }
