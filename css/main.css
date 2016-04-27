@@ -4,6 +4,49 @@
  */
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@font-face {
+  font-family: 'FontAwesome';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/FontAwesome/FontAwesome.eot");
+  src: url("../fonts/FontAwesome/FontAwesome.eot?#iefix") format("embedded-opentype"), url("../fonts/FontAwesome/FontAwesome.woff") format("woff"), url("../fonts/FontAwesome/FontAwesome.ttf") format("truetype"), url("../fonts/FontAwesome/FontAwesome.svg#FontAwesome") format("svg");
+}
+/* line 13, ../scss/_icons.scss */
+.bt-icon:before,
+.bt-icon-alt:before {
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none !important;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 28, ../scss/_icons.scss */
+.icon-twitter:before {
+  content: "\f099";
+}
+
+/* line 32, ../scss/_icons.scss */
+.icon-gplus:before {
+  content: "\f0d5";
+}
+
+/* line 36, ../scss/_icons.scss */
+.icon-mail:before {
+  content: "\f003";
+}
+
+/* line 40, ../scss/_icons.scss */
+.icon-facebook:before {
+  content: "\f09a";
+}
+
 /* line 3, ../scss/_general.scss */
 *,
 *:after,
@@ -323,45 +366,92 @@ The listener closes the menu */
   color: #999;
 }
 
-@font-face {
-  font-family: 'FontAwesome';
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/FontAwesome/FontAwesome.eot");
-  src: url("../fonts/FontAwesome/FontAwesome.eot?#iefix") format("embedded-opentype"), url("../fonts/FontAwesome/FontAwesome.woff") format("woff"), url("../fonts/FontAwesome/FontAwesome.ttf") format("truetype"), url("../fonts/FontAwesome/FontAwesome.svg#FontAwesome") format("svg");
-}
-/* line 13, ../scss/_icons.scss */
-.bt-icon:before,
-.bt-icon-alt:before {
-  font-family: "FontAwesome";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none !important;
-  speak: none;
-  display: inline-block;
-  text-decoration: none;
-  width: 1em;
-  line-height: inherit;
-  -webkit-font-smoothing: antialiased;
+/**
+  * This class is a mere adaptation of Mary Lou's work
+  * Source : http://tympanus.net/codrops/2013/10/03/a-collection-of-separator-styles/
+  * IMPORTANT : This file plays with z-index and position: relative, be sure to adapt
+  */
+/* We must adapt a few containers to have a clean playground */
+/* line 8, ../scss/_sections.scss */
+.container {
+  overflow: hidden;
+  width: 100%;
+  padding: 0px;
+  /* we don't want the pseudo-elements sticking out */
 }
 
-/* line 28, ../scss/_icons.scss */
-.icon-twitter:before {
-  content: "\f099";
+/* line 15, ../scss/_sections.scss */
+body {
+  margin: 0px;
 }
 
-/* line 32, ../scss/_icons.scss */
-.icon-gplus:before {
-  content: "\f0d5";
+/* line 18, ../scss/_sections.scss */
+nav {
+  z-index: 3;
 }
 
-/* line 36, ../scss/_icons.scss */
-.icon-mail:before {
-  content: "\f003";
+/* line 21, ../scss/_sections.scss */
+header {
+  padding: 88px 32px 112px 32px;
+  text-align: center;
 }
 
-/* line 40, ../scss/_icons.scss */
-.icon-facebook:before {
-  content: "\f09a";
+/* line 25, ../scss/_sections.scss */
+section {
+  padding: 160px 80px;
+  position: relative;
+}
+
+/* line 29, ../scss/_sections.scss */
+footer {
+  padding: 20px 80px 0px 80px;
+  text-align: center;
+}
+
+/* Section color alternance */
+/* line 35, ../scss/_sections.scss */
+.color-separator:nth-child(odd) {
+  background: #F2562E;
+}
+
+/* line 38, ../scss/_sections.scss */
+.color-separator:nth-child(even) {
+  background: #ee3c0f;
+}
+
+/* Common style for pseudo-elements */
+/* line 43, ../scss/_sections.scss */
+section::before,
+section::after {
+  position: absolute;
+  content: '';
+  pointer-events: none;
+}
+
+/* line 49, ../scss/_sections.scss */
+section::after {
+  z-index: 1;
+}
+
+/* Triangles */
+/* line 54, ../scss/_sections.scss */
+.triangles-separator::before,
+.triangles-separator::after {
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* line 63, ../scss/_sections.scss */
+.triangles-separator::before {
+  top: -50px;
+  background: inherit;
+}
+
+/* line 68, ../scss/_sections.scss */
+.triangles-separator::after {
+  bottom: -50px;
+  background: inherit;
 }

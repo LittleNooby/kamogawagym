@@ -1,0 +1,71 @@
+/**
+  * This class is a mere adaptation of Mary Lou's work
+  * Source : http://tympanus.net/codrops/2013/10/03/a-collection-of-separator-styles/
+  * IMPORTANT : This file plays with z-index and position: relative, be sure to adapt
+  */
+
+/* We must adapt a few containers to have a clean playground */
+.container {
+	overflow: hidden;
+	width: 100%;
+	padding: 0px;
+	/* we don't want the pseudo-elements sticking out */
+}
+
+body {
+	margin: 0px;
+}
+nav {
+	z-index: 3;
+}
+header {
+	padding:88px 32px 112px 32px;
+	text-align: center;
+}
+section {
+	padding: 160px 80px; 
+	position: relative;
+}
+footer {
+	padding: 20px 80px 0px 80px;
+	text-align: center;
+}
+
+/* Section color alternance */
+.color-separator:nth-child(odd) {
+	background: $bgColor;
+}
+.color-separator:nth-child(even) {
+	background: darken( $bgColor, 7%);
+}
+
+/* Common style for pseudo-elements */
+section::before,
+section::after {
+	position: absolute;
+	content: '';
+	pointer-events: none;
+}
+section::after {
+	z-index: 1;
+}
+
+/* Triangles */
+.triangles-separator::before,
+.triangles-separator::after {
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	-webkit-transform: translateX(-50%) rotate(45deg);
+	transform: translateX(-50%) rotate(45deg);
+}
+
+.triangles-separator::before {
+	top: -50px;
+	background: inherit;
+}
+
+.triangles-separator::after {
+	bottom: -50px;
+	background: inherit;
+}
