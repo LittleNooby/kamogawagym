@@ -47,7 +47,6 @@ section::before,
 section::after {
 	position: absolute;
 	content: '';
-	pointer-events: none;
 }
 section::after {
 	z-index: 1;

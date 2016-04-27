@@ -3,8 +3,10 @@
   */
 
 
-$logoDiameter : 200px;
+$logoDiameter: 200px;
 .logo {
+	margin: 0 auto;
+	margin-top: 20px;
 	// Circle
 	background: $bgColor;
 	width: $logoDiameter;

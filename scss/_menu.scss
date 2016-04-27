@@ -5,8 +5,6 @@
 
 @import "compass/css3";
 
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-
 /**
   * The trick is that we use the border of the nav element as the menu while its content serve as a curtain over the full page
   */
@@ -82,7 +80,8 @@ The listener closes the menu */
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none; // ghost text
+	//user-select: none; // ghost text, only vendor-prefixes works
+	// by ghost I mean you can't select it
 	-webkit-transition: background-color 0.3s;
 	transition: background-color 0.3s;
 }
