@@ -28,7 +28,7 @@
 
 .bt-menu.bt-menu-open {
 	height: 100%;
-	border-width: 25px 25px 50px 150px;
+	border-width: 0px 0px 50px 150px;
 	background-color: opacify( $curtainColor, 0.3); // a transparent curtain over full page
 	-webkit-transition: border-width 0.3s, background-color 0.3s;
 	transition: border-width 0.3s, background-color 0.3s;
