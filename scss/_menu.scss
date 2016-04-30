@@ -5,250 +5,280 @@
 
 @import "compass/css3";
 
-/**
-  * The trick is that we use the border of the nav element as the menu while its content serve as a curtain over the full page
-  */
-.bt-menu {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 0;
-	border-width: 0px;
-	border-style: solid;
-	border-color: $menuColor;
-	// black but transparent so not visible until menu opens (bt-menu-open)
-	background-color: $curtainColor; // Curtain color
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	-webkit-transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
-	transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
-}
+// < md-screen
+@media (max-width: $screen-md-min - 1) {
+	/**
+	  * The trick is that we use the border of the nav element as the menu while its content serve as a curtain over the full page
+	  */
+	.bt-menu {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+		border-width: 0px;
+		border-style: solid;
+		border-color: $menuColor;
+		// black but transparent so not visible until menu opens (bt-menu-open)
+		background-color: $curtainColor; // Curtain color
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-webkit-transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+		transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+	}
 
-.bt-menu.bt-menu-open {
-	height: 100%;
-	border-width: 0px 0px 50px 150px;
-	background-color: opacify( $curtainColor, 0.3); // a transparent curtain over full page
-	-webkit-transition: border-width 0.3s, background-color 0.3s;
-	transition: border-width 0.3s, background-color 0.3s;
-}
+	.bt-menu.bt-menu-open {
+		height: 100%;
+		border-width: 0px 0px 50px 150px;
+		background-color: opacify( $curtainColor, 0.3); // a transparent curtain over full page
+		-webkit-transition: border-width 0.3s, background-color 0.3s;
+		transition: border-width 0.3s, background-color 0.3s;
+	}
 
-/**
-  * Curtain
-  */
-/* The following is applied by menusection.js on a div it created itself
-It sole purpose is to isolate nav content
-The listener closes the menu */
-.bt-overlay {
-	position: absolute;
-	width: 100%;
-	cursor: pointer;
-}
-// the dummy container will cover nav only when the menu is open
-.bt-menu-open .bt-overlay { 
-	height: 100%;
-}
+	/**
+	  * Curtain
+	  */
+	/* The following is applied by menusection.js on a div it created itself
+	It sole purpose is to isolate nav content
+	The listener closes the menu */
+	.bt-overlay {
+		position: absolute;
+		width: 100%;
+		cursor: pointer;
+	}
+	// the dummy container will cover nav only when the menu is open
+	.bt-menu-open .bt-overlay { 
+		height: 100%;
+	}
 
-/**
-  * Hamburger
-  */
-// <a> Area for the hamburger menu
-.bt-menu-trigger {
-	position: fixed;
-	top: 15px;
-	left: 20px;
-	display: block;
-	width: 50px;
-	height: 50px;
-	cursor: pointer;
-}
-// <span> inside <a> is the hamburger
-.bt-menu-trigger span {
-	position: absolute;
-	width: 100%;
-	height: 4px;
-	top: 50%;
-	left: 0;
-	margin-top: -2px;
-	// placing its top corner at 50% the container minus half its height makes it centered
-	display: block;
-	background-color: #fff; //hamburger bar
-	font-size: 0px; // hide text
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	//user-select: none; // ghost text, only vendor-prefixes works
-	// by ghost I mean you can't select it
-	-webkit-transition: background-color 0.3s;
-	transition: background-color 0.3s;
-}
-// Two other bars of the hambuger, made with pseudo-element
-.bt-menu-trigger span:before,
-.bt-menu-trigger span:after {
-	position: absolute;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #fff;
-	content: '';
-	-webkit-transition: -webkit-transform 0.3s;
-	transition: transform 0.3s;
-}
-// translating the superimposed bars
-.bt-menu-trigger span:before {
-	-webkit-transform: translateY(-250%);
-	transform: translateY(-250%);
-}
-.bt-menu-trigger span:after {
-	-webkit-transform: translateY(250%);
-	transform: translateY(250%);
-}
+	/**
+	  * Hamburger
+	  */
+	// <a> Area for the hamburger menu
+	.bt-menu-trigger {
+		position: fixed;
+		top: 15px;
+		left: 20px;
+		display: block;
+		width: 50px;
+		height: 50px;
+		cursor: pointer;
+	}
+	// <span> inside <a> is the hamburger
+	.bt-menu-trigger span {
+		position: absolute;
+		width: 100%;
+		height: 4px;
+		top: 50%;
+		left: 0;
+		margin-top: -2px;
+		// placing its top corner at 50% the container minus half its height makes it centered
+		display: block;
+		background-color: #fff; //hamburger bar
+		font-size: 0px; // hide text
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		//user-select: none; // ghost text, only vendor-prefixes works
+		// by ghost I mean you can't select it
+		-webkit-transition: background-color 0.3s;
+		transition: background-color 0.3s;
+	}
+	// Two other bars of the hambuger, made with pseudo-element
+	.bt-menu-trigger span:before,
+	.bt-menu-trigger span:after {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #fff;
+		content: '';
+		-webkit-transition: -webkit-transform 0.3s;
+		transition: transform 0.3s;
+	}
+	// translating the superimposed bars
+	.bt-menu-trigger span:before {
+		-webkit-transform: translateY(-250%);
+		transform: translateY(-250%);
+	}
+	.bt-menu-trigger span:after {
+		-webkit-transform: translateY(250%);
+		transform: translateY(250%);
+	}
 
-/**
-  * Cross
-  */
-// Center bar hides to let the cross take the place
-.bt-menu-open .bt-menu-trigger span {
-	background-color: transparent;
-}
-// Outer bars rotate to form a cross
-.bt-menu-open .bt-menu-trigger span:before {
-	-webkit-transform: translateY(0) rotate(45deg);
-	transform: translateY(0) rotate(45deg);
-}
-.bt-menu-open .bt-menu-trigger span:after {
-	-webkit-transform: translateY(0) rotate(-45deg);
-	transform: translateY(0) rotate(-45deg);
-}
+	/**
+	  * Cross
+	  */
+	// Center bar hides to let the cross take the place
+	.bt-menu-open .bt-menu-trigger span {
+		background-color: transparent;
+	}
+	// Outer bars rotate to form a cross
+	.bt-menu-open .bt-menu-trigger span:before {
+		-webkit-transform: translateY(0) rotate(45deg);
+		transform: translateY(0) rotate(45deg);
+	}
+	.bt-menu-open .bt-menu-trigger span:after {
+		-webkit-transform: translateY(0) rotate(-45deg);
+		transform: translateY(0) rotate(-45deg);
+	}
 
-/**
-  * Menu items position
-  */
-.bt-menu ul {
-	position: fixed;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-// Places section links on the top left
-.bt-menu ul:first-of-type {
-	top: 75px;
-	left: 0;
-}
-// Places social media to the bottom right
-.bt-menu ul:nth-of-type(2) {
-	right: 20px;
-	bottom: 0;
-}
-// social media align
-.bt-menu ul:nth-of-type(2) li {
-	float: left;
-	font-size: 0px;
-}
+	/**
+	  * Menu items position
+	  */
+	.bt-menu ul {
+		position: fixed;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	// Places section links on the top left
+	.bt-menu ul:first-of-type {
+		top: 75px;
+		left: 0;
+	}
+	// Places social media to the bottom right
+	.bt-menu ul:nth-of-type(2) {
+		right: 20px;
+		bottom: 0;
+	}
+	// social media align
+	.bt-menu ul:nth-of-type(2) li {
+		float: left;
+		font-size: 0px;
+	}
 
-/**
-  * Menu items animation
-  */
-.bt-menu ul li,
-.bt-menu ul li a {
-	display: block;
-}
-// Initially hidden
-.bt-menu ul li {
-	visibility: hidden;
-	opacity: 0;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
-	transition: transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
-}
-// And now they appear smoothly
-.bt-menu.bt-menu-open ul:first-of-type li,
-.bt-menu.bt-menu-open ul:nth-of-type(2) li {
-	visibility: visible;
-	opacity: 1;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s 0.1s;
-	transition: transform 0.3s, opacity 0.3s;
-}
+	/**
+	  * Menu items animation
+	  */
+	.bt-menu ul li,
+	.bt-menu ul li a {
+		display: block;
+	}
+	// Initially hidden
+	.bt-menu ul li {
+		visibility: hidden;
+		opacity: 0;
+		-webkit-transition: -webkit-transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
+		transition: transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
+	}
+	// And now they appear smoothly
+	.bt-menu.bt-menu-open ul:first-of-type li,
+	.bt-menu.bt-menu-open ul:nth-of-type(2) li {
+		visibility: visible;
+		opacity: 1;
+		-webkit-transition: -webkit-transform 0.3s, opacity 0.3s 0.1s;
+		transition: transform 0.3s, opacity 0.3s;
+	}
 
-/* First menu animation */
-.bt-menu ul:first-of-type li {
-	width: 150px;
-	height: 50px;
-	line-height: 50px;
-	// Make it disappear to the left side
-	-webkit-transform: translate3d(-100%,50%,0);
-	transform: translate3d(-100%,50%,0);
-}
-.bt-menu.bt-menu-open ul:first-of-type li {
-	// Make it appear from the left side
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
+	/* First menu animation */
+	.bt-menu ul:first-of-type li {
+		width: 150px;
+		height: 50px;
+		line-height: 50px;
+		// Make it disappear to the left side
+		-webkit-transform: translate3d(-100%,50%,0);
+		transform: translate3d(-100%,50%,0);
+	}
+	.bt-menu.bt-menu-open ul:first-of-type li {
+		// Make it appear from the left side
+		-webkit-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
 
-/* Second menu animation */
-.bt-menu ul:nth-of-type(2) li {
-	width: 60px;
-	height: 50px;
-	line-height: 50px;
-	-webkit-transform: scale(0);
-	transform: scale(0);
-}
+	/* Second menu animation */
+	.bt-menu ul:nth-of-type(2) li {
+		width: 60px;
+		height: 50px;
+		line-height: 50px;
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
 
-@for $i from 1 through 4 {
-	.bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(#{$i}) { 
-		-webkit-transition-delay: 0.1 * $i + s;
-		transition-delay: 0.1 * $i + s;
+	@for $i from 1 through 4 {
+		.bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(#{$i}) { 
+			-webkit-transition-delay: 0.1 * $i + s;
+			transition-delay: 0.1 * $i + s;
+		}
+	}
+
+	.bt-menu.bt-menu-open ul:nth-of-type(2) li {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	/* Second menu animation end*/
+
+	/**
+	  * Styling the menu
+	  */
+	.bt-menu ul li a {
+		display: block;
+		outline: none;
+		text-decoration: none;
+	}
+
+	.bt-menu ul:first-of-type li a {
+		padding: 0 20px;
+		box-shadow: inset 0 1px rgba(0,0,0,0.2);
+		color: $menuLinksColor;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 1em;
+		-webkit-transition: color 0.2s;
+		transition: color 0.2s;
+	}
+
+	// line up and down a bit darker because last child is not affecter by bt-menu ul:first-type li a
+	.bt-menu ul:first-of-type li:last-child a {
+		box-shadow: inset 0 1px rgba(0,0,0,0.2), inset 0 -1px rgba(0,0,0,0.2);
+	}
+
+	.bt-menu ul:nth-of-type(2) li a {
+		color: transparent;
+		text-align: center;
+		font-size: 0px; // Makes the container smaller thus the icon
+	}
+
+	.bt-menu ul li a:before {
+		color: $menuLinksColor;
+		font-size: 24px; // Makes the container bigger thus the icon
+		-webkit-transition: color 0.2s;
+		transition: color 0.2s;
+	}
+
+	.bt-menu ul:first-of-type li a:hover,
+	.bt-menu ul:first-of-type li a:focus,
+	.bt-menu ul li a:hover:before,
+	.bt-menu ul li a:focus:before {
+		color: $highlightColor;
 	}
 }
+// End of < md screen
 
-.bt-menu.bt-menu-open ul:nth-of-type(2) li {
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-/* Second menu animation end*/
+@media (min-width: $screen-md-min) {
+	/**
+	  * Let's fix the position always on top
+	  */
+	nav {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 50px;
+	}
+	nav:child {
+		float: left;
+	}
+	nav ul li {
+		float:left;
+	}
 
-/**
-  * Styling the menu
-  */
-.bt-menu ul li a {
-	display: block;
-	outline: none;
-	text-decoration: none;
-}
-
-.bt-menu ul:first-of-type li a {
-	padding: 0 20px;
-	box-shadow: inset 0 1px rgba(0,0,0,0.2);
-	color: $menuLinksColor;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-size: 1em;
-	-webkit-transition: color 0.2s;
-	transition: color 0.2s;
-}
-
-// line up and down a bit darker because last child is not affecter by bt-menu ul:first-type li a
-.bt-menu ul:first-of-type li:last-child a {
-	box-shadow: inset 0 1px rgba(0,0,0,0.2), inset 0 -1px rgba(0,0,0,0.2);
-}
-
-.bt-menu ul:nth-of-type(2) li a {
-	color: transparent;
-	text-align: center;
-	font-size: 0px; // Makes the container smaller thus the icon
-}
-
-.bt-menu ul li a:before {
-	color: $menuLinksColor;
-	font-size: 24px; // Makes the container bigger thus the icon
-	-webkit-transition: color 0.2s;
-	transition: color 0.2s;
-}
-
-.bt-menu ul:first-of-type li a:hover,
-.bt-menu ul:first-of-type li a:focus,
-.bt-menu ul li a:hover:before,
-.bt-menu ul li a:focus:before {
-	color: $highlightColor;
+	/**
+	  * Fix the aesthetic
+	  */
+	nav ul {
+		list-style: none;
+	}
 }
