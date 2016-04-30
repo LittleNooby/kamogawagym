@@ -80,7 +80,7 @@ a:focus {
 /**
   * The trick is that we use the border of the nav element as the menu while its content serve as a curtain over the full page
   */
-/* line 12, ../scss/_menu.scss */
+/* line 11, ../scss/_menu.scss */
 .bt-menu {
   position: fixed;
   top: 0;
@@ -97,7 +97,7 @@ a:focus {
   transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
 }
 
-/* line 29, ../scss/_menu.scss */
+/* line 28, ../scss/_menu.scss */
 .bt-menu.bt-menu-open {
   height: 100%;
   border-width: 0px 0px 50px 150px;
@@ -112,14 +112,14 @@ a:focus {
 /* The following is applied by menusection.js on a div it created itself
 It sole purpose is to isolate nav content
 The listener closes the menu */
-/* line 43, ../scss/_menu.scss */
+/* line 42, ../scss/_menu.scss */
 .bt-overlay {
   position: absolute;
   width: 100%;
   cursor: pointer;
 }
 
-/* line 49, ../scss/_menu.scss */
+/* line 48, ../scss/_menu.scss */
 .bt-menu-open .bt-overlay {
   height: 100%;
 }
@@ -127,7 +127,7 @@ The listener closes the menu */
 /**
   * Hamburger
   */
-/* line 57, ../scss/_menu.scss */
+/* line 56, ../scss/_menu.scss */
 .bt-menu-trigger {
   position: fixed;
   top: 15px;
@@ -138,7 +138,7 @@ The listener closes the menu */
   cursor: pointer;
 }
 
-/* line 67, ../scss/_menu.scss */
+/* line 66, ../scss/_menu.scss */
 .bt-menu-trigger span {
   position: absolute;
   width: 100%;
@@ -158,7 +158,7 @@ The listener closes the menu */
   transition: background-color 0.3s;
 }
 
-/* line 89, ../scss/_menu.scss */
+/* line 88, ../scss/_menu.scss */
 .bt-menu-trigger span:before,
 .bt-menu-trigger span:after {
   position: absolute;
@@ -171,13 +171,13 @@ The listener closes the menu */
   transition: transform 0.3s;
 }
 
-/* line 101, ../scss/_menu.scss */
+/* line 100, ../scss/_menu.scss */
 .bt-menu-trigger span:before {
   -webkit-transform: translateY(-250%);
   transform: translateY(-250%);
 }
 
-/* line 105, ../scss/_menu.scss */
+/* line 104, ../scss/_menu.scss */
 .bt-menu-trigger span:after {
   -webkit-transform: translateY(250%);
   transform: translateY(250%);
@@ -186,18 +186,18 @@ The listener closes the menu */
 /**
   * Cross
   */
-/* line 114, ../scss/_menu.scss */
+/* line 113, ../scss/_menu.scss */
 .bt-menu-open .bt-menu-trigger span {
   background-color: transparent;
 }
 
-/* line 118, ../scss/_menu.scss */
+/* line 117, ../scss/_menu.scss */
 .bt-menu-open .bt-menu-trigger span:before {
   -webkit-transform: translateY(0) rotate(45deg);
   transform: translateY(0) rotate(45deg);
 }
 
-/* line 122, ../scss/_menu.scss */
+/* line 121, ../scss/_menu.scss */
 .bt-menu-open .bt-menu-trigger span:after {
   -webkit-transform: translateY(0) rotate(-45deg);
   transform: translateY(0) rotate(-45deg);
@@ -206,7 +206,7 @@ The listener closes the menu */
 /**
   * Menu items position
   */
-/* line 130, ../scss/_menu.scss */
+/* line 129, ../scss/_menu.scss */
 .bt-menu ul {
   position: fixed;
   margin: 0;
@@ -214,19 +214,19 @@ The listener closes the menu */
   list-style: none;
 }
 
-/* line 137, ../scss/_menu.scss */
+/* line 136, ../scss/_menu.scss */
 .bt-menu ul:first-of-type {
   top: 75px;
   left: 0;
 }
 
-/* line 142, ../scss/_menu.scss */
+/* line 141, ../scss/_menu.scss */
 .bt-menu ul:nth-of-type(2) {
   right: 20px;
   bottom: 0;
 }
 
-/* line 147, ../scss/_menu.scss */
+/* line 146, ../scss/_menu.scss */
 .bt-menu ul:nth-of-type(2) li {
   float: left;
   font-size: 0px;
@@ -235,13 +235,13 @@ The listener closes the menu */
 /**
   * Menu items animation
   */
-/* line 155, ../scss/_menu.scss */
+/* line 154, ../scss/_menu.scss */
 .bt-menu ul li,
 .bt-menu ul li a {
   display: block;
 }
 
-/* line 160, ../scss/_menu.scss */
+/* line 159, ../scss/_menu.scss */
 .bt-menu ul li {
   visibility: hidden;
   opacity: 0;
@@ -249,7 +249,7 @@ The listener closes the menu */
   transition: transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
 }
 
-/* line 167, ../scss/_menu.scss */
+/* line 166, ../scss/_menu.scss */
 .bt-menu.bt-menu-open ul:first-of-type li,
 .bt-menu.bt-menu-open ul:nth-of-type(2) li {
   visibility: visible;
@@ -259,7 +259,7 @@ The listener closes the menu */
 }
 
 /* First menu animation */
-/* line 176, ../scss/_menu.scss */
+/* line 175, ../scss/_menu.scss */
 .bt-menu ul:first-of-type li {
   width: 150px;
   height: 50px;
@@ -268,14 +268,14 @@ The listener closes the menu */
   transform: translate3d(-100%, 50%, 0);
 }
 
-/* line 184, ../scss/_menu.scss */
+/* line 183, ../scss/_menu.scss */
 .bt-menu.bt-menu-open ul:first-of-type li {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
 /* Second menu animation */
-/* line 191, ../scss/_menu.scss */
+/* line 190, ../scss/_menu.scss */
 .bt-menu ul:nth-of-type(2) li {
   width: 60px;
   height: 50px;
@@ -284,31 +284,31 @@ The listener closes the menu */
   transform: scale(0);
 }
 
-/* line 200, ../scss/_menu.scss */
+/* line 199, ../scss/_menu.scss */
 .bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(1) {
   -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
 
-/* line 200, ../scss/_menu.scss */
+/* line 199, ../scss/_menu.scss */
 .bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(2) {
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
 
-/* line 200, ../scss/_menu.scss */
+/* line 199, ../scss/_menu.scss */
 .bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(3) {
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
 
-/* line 200, ../scss/_menu.scss */
+/* line 199, ../scss/_menu.scss */
 .bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(4) {
   -webkit-transition-delay: 0.4s;
   transition-delay: 0.4s;
 }
 
-/* line 206, ../scss/_menu.scss */
+/* line 205, ../scss/_menu.scss */
 .bt-menu.bt-menu-open ul:nth-of-type(2) li {
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -318,14 +318,14 @@ The listener closes the menu */
 /**
   * Styling the menu
   */
-/* line 215, ../scss/_menu.scss */
+/* line 214, ../scss/_menu.scss */
 .bt-menu ul li a {
   display: block;
   outline: none;
   text-decoration: none;
 }
 
-/* line 221, ../scss/_menu.scss */
+/* line 220, ../scss/_menu.scss */
 .bt-menu ul:first-of-type li a {
   padding: 0 20px;
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.2);
@@ -337,19 +337,19 @@ The listener closes the menu */
   transition: color 0.2s;
 }
 
-/* line 233, ../scss/_menu.scss */
+/* line 232, ../scss/_menu.scss */
 .bt-menu ul:first-of-type li:last-child a {
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.2), inset 0 -1px rgba(0, 0, 0, 0.2);
 }
 
-/* line 237, ../scss/_menu.scss */
+/* line 236, ../scss/_menu.scss */
 .bt-menu ul:nth-of-type(2) li a {
   color: transparent;
   text-align: center;
   font-size: 0px;
 }
 
-/* line 243, ../scss/_menu.scss */
+/* line 242, ../scss/_menu.scss */
 .bt-menu ul li a:before {
   color: #fff;
   font-size: 24px;
@@ -357,7 +357,7 @@ The listener closes the menu */
   transition: color 0.2s;
 }
 
-/* line 250, ../scss/_menu.scss */
+/* line 249, ../scss/_menu.scss */
 .bt-menu ul:first-of-type li a:hover,
 .bt-menu ul:first-of-type li a:focus,
 .bt-menu ul li a:hover:before,
