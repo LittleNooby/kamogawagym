@@ -5,7 +5,6 @@
 
 @import "compass/css3";
 
-// < md-screen
 @media (max-width: $screen-md-min - 1) {
 	/**
 	  * The trick is that we use the border of the nav element as the menu while its content serve as a curtain over the full page
