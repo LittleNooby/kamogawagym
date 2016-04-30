@@ -98,7 +98,7 @@ a:focus {
     transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
   }
 
-  /* line 30, ../scss/_menu.scss */
+  /* line 29, ../scss/_menu.scss */
   .bt-menu.bt-menu-open {
     height: 100%;
     border-width: 0px 0px 50px 150px;
@@ -113,14 +113,14 @@ a:focus {
   /* The following is applied by menusection.js on a div it created itself
   It sole purpose is to isolate nav content
   The listener closes the menu */
-  /* line 44, ../scss/_menu.scss */
+  /* line 43, ../scss/_menu.scss */
   .bt-overlay {
     position: absolute;
     width: 100%;
     cursor: pointer;
   }
 
-  /* line 50, ../scss/_menu.scss */
+  /* line 49, ../scss/_menu.scss */
   .bt-menu-open .bt-overlay {
     height: 100%;
   }
@@ -128,7 +128,7 @@ a:focus {
   /**
     * Hamburger
     */
-  /* line 58, ../scss/_menu.scss */
+  /* line 57, ../scss/_menu.scss */
   .bt-menu-trigger {
     position: fixed;
     top: 15px;
@@ -139,7 +139,7 @@ a:focus {
     cursor: pointer;
   }
 
-  /* line 68, ../scss/_menu.scss */
+  /* line 67, ../scss/_menu.scss */
   .bt-menu-trigger span {
     position: absolute;
     width: 100%;
@@ -159,7 +159,7 @@ a:focus {
     transition: background-color 0.3s;
   }
 
-  /* line 90, ../scss/_menu.scss */
+  /* line 89, ../scss/_menu.scss */
   .bt-menu-trigger span:before,
   .bt-menu-trigger span:after {
     position: absolute;
@@ -172,13 +172,13 @@ a:focus {
     transition: transform 0.3s;
   }
 
-  /* line 102, ../scss/_menu.scss */
+  /* line 101, ../scss/_menu.scss */
   .bt-menu-trigger span:before {
     -webkit-transform: translateY(-250%);
     transform: translateY(-250%);
   }
 
-  /* line 106, ../scss/_menu.scss */
+  /* line 105, ../scss/_menu.scss */
   .bt-menu-trigger span:after {
     -webkit-transform: translateY(250%);
     transform: translateY(250%);
@@ -187,18 +187,18 @@ a:focus {
   /**
     * Cross
     */
-  /* line 115, ../scss/_menu.scss */
+  /* line 114, ../scss/_menu.scss */
   .bt-menu-open .bt-menu-trigger span {
     background-color: transparent;
   }
 
-  /* line 119, ../scss/_menu.scss */
+  /* line 118, ../scss/_menu.scss */
   .bt-menu-open .bt-menu-trigger span:before {
     -webkit-transform: translateY(0) rotate(45deg);
     transform: translateY(0) rotate(45deg);
   }
 
-  /* line 123, ../scss/_menu.scss */
+  /* line 122, ../scss/_menu.scss */
   .bt-menu-open .bt-menu-trigger span:after {
     -webkit-transform: translateY(0) rotate(-45deg);
     transform: translateY(0) rotate(-45deg);
@@ -207,7 +207,7 @@ a:focus {
   /**
     * Menu items position
     */
-  /* line 131, ../scss/_menu.scss */
+  /* line 130, ../scss/_menu.scss */
   .bt-menu ul {
     position: fixed;
     margin: 0;
@@ -215,19 +215,19 @@ a:focus {
     list-style: none;
   }
 
-  /* line 138, ../scss/_menu.scss */
+  /* line 137, ../scss/_menu.scss */
   .bt-menu ul:first-of-type {
     top: 75px;
     left: 0;
   }
 
-  /* line 143, ../scss/_menu.scss */
+  /* line 142, ../scss/_menu.scss */
   .bt-menu ul:nth-of-type(2) {
     right: 20px;
     bottom: 0;
   }
 
-  /* line 148, ../scss/_menu.scss */
+  /* line 147, ../scss/_menu.scss */
   .bt-menu ul:nth-of-type(2) li {
     float: left;
     font-size: 0px;
@@ -236,13 +236,13 @@ a:focus {
   /**
     * Menu items animation
     */
-  /* line 156, ../scss/_menu.scss */
+  /* line 155, ../scss/_menu.scss */
   .bt-menu ul li,
   .bt-menu ul li a {
     display: block;
   }
 
-  /* line 161, ../scss/_menu.scss */
+  /* line 160, ../scss/_menu.scss */
   .bt-menu ul li {
     visibility: hidden;
     opacity: 0;
@@ -250,7 +250,7 @@ a:focus {
     transition: transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
   }
 
-  /* line 168, ../scss/_menu.scss */
+  /* line 167, ../scss/_menu.scss */
   .bt-menu.bt-menu-open ul:first-of-type li,
   .bt-menu.bt-menu-open ul:nth-of-type(2) li {
     visibility: visible;
@@ -260,7 +260,7 @@ a:focus {
   }
 
   /* First menu animation */
-  /* line 177, ../scss/_menu.scss */
+  /* line 176, ../scss/_menu.scss */
   .bt-menu ul:first-of-type li {
     width: 150px;
     height: 50px;
@@ -269,14 +269,14 @@ a:focus {
     transform: translate3d(-100%, 50%, 0);
   }
 
-  /* line 185, ../scss/_menu.scss */
+  /* line 184, ../scss/_menu.scss */
   .bt-menu.bt-menu-open ul:first-of-type li {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
 
   /* Second menu animation */
-  /* line 192, ../scss/_menu.scss */
+  /* line 191, ../scss/_menu.scss */
   .bt-menu ul:nth-of-type(2) li {
     width: 60px;
     height: 50px;
@@ -285,48 +285,38 @@ a:focus {
     transform: scale(0);
   }
 
-  /* line 201, ../scss/_menu.scss */
+  /* line 200, ../scss/_menu.scss */
   .bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(1) {
     -webkit-transition-delay: 0.1s;
     transition-delay: 0.1s;
   }
 
-  /* line 201, ../scss/_menu.scss */
+  /* line 200, ../scss/_menu.scss */
   .bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(2) {
     -webkit-transition-delay: 0.2s;
     transition-delay: 0.2s;
   }
 
-  /* line 201, ../scss/_menu.scss */
+  /* line 200, ../scss/_menu.scss */
   .bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(3) {
     -webkit-transition-delay: 0.3s;
     transition-delay: 0.3s;
   }
 
-  /* line 201, ../scss/_menu.scss */
+  /* line 200, ../scss/_menu.scss */
   .bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(4) {
     -webkit-transition-delay: 0.4s;
     transition-delay: 0.4s;
   }
 
-  /* line 207, ../scss/_menu.scss */
+  /* line 206, ../scss/_menu.scss */
   .bt-menu.bt-menu-open ul:nth-of-type(2) li {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
 
   /* Second menu animation end*/
-  /**
-    * Styling the menu
-    */
-  /* line 216, ../scss/_menu.scss */
-  .bt-menu ul li a {
-    display: block;
-    outline: none;
-    text-decoration: none;
-  }
-
-  /* line 222, ../scss/_menu.scss */
+  /* line 213, ../scss/_menu.scss */
   .bt-menu ul:first-of-type li a {
     padding: 0 20px;
     box-shadow: inset 0 1px rgba(0, 0, 0, 0.2);
@@ -338,19 +328,19 @@ a:focus {
     transition: color 0.2s;
   }
 
-  /* line 234, ../scss/_menu.scss */
+  /* line 225, ../scss/_menu.scss */
   .bt-menu ul:first-of-type li:last-child a {
     box-shadow: inset 0 1px rgba(0, 0, 0, 0.2), inset 0 -1px rgba(0, 0, 0, 0.2);
   }
 
-  /* line 238, ../scss/_menu.scss */
+  /* line 229, ../scss/_menu.scss */
   .bt-menu ul:nth-of-type(2) li a {
     color: transparent;
     text-align: center;
     font-size: 0px;
   }
 
-  /* line 244, ../scss/_menu.scss */
+  /* line 235, ../scss/_menu.scss */
   .bt-menu ul li a:before {
     color: #fff;
     font-size: 24px;
@@ -358,7 +348,7 @@ a:focus {
     transition: color 0.2s;
   }
 
-  /* line 251, ../scss/_menu.scss */
+  /* line 242, ../scss/_menu.scss */
   .bt-menu ul:first-of-type li a:hover,
   .bt-menu ul:first-of-type li a:focus,
   .bt-menu ul li a:hover:before,
@@ -367,34 +357,72 @@ a:focus {
   }
 }
 @media (min-width: 992px) {
-  /**
-    * Let's fix the position always on top
-    */
-  /* line 264, ../scss/_menu.scss */
+  /* line 253, ../scss/_menu.scss */
   nav {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 50px;
+    background: rgba(51, 51, 51, 0.8);
   }
 
-  /* line 271, ../scss/_menu.scss */
-  nav:child {
-    float: left;
+  /* line 263, ../scss/_menu.scss */
+  nav a,
+  nav ul {
+    list-style: none;
+    color: #fff;
+  }
+
+  /* line 270, ../scss/_menu.scss */
+  nav a:first-of-type,
+  nav ul:first-of-type {
+    padding-top: 15px;
   }
 
   /* line 274, ../scss/_menu.scss */
+  nav ul:nth-of-type(2) {
+    padding-top: 10px;
+  }
+
+  /* line 279, ../scss/_menu.scss */
+  nav ul:first-of-type li {
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: inset 1px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  /* line 284, ../scss/_menu.scss */
+  nav ul:first-of-type li:last-child {
+    box-shadow: inset 1px 0px rgba(0, 0, 0, 0.2), inset -1px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  /* line 287, ../scss/_menu.scss */
+  nav ul:nth-of-type(2) li {
+    width: 50px;
+  }
+
+  /* line 291, ../scss/_menu.scss */
   nav ul li {
     float: left;
   }
 
-  /**
-    * Fix the aesthetic
-    */
-  /* line 281, ../scss/_menu.scss */
-  nav ul {
-    list-style: none;
+  /* line 296, ../scss/_menu.scss */
+  nav ul:nth-of-type(2) li a {
+    font-size: 0px;
+  }
+
+  /* line 299, ../scss/_menu.scss */
+  nav ul:nth-of-type(2) li a:before {
+    font-size: 24px;
+  }
+
+  /* line 303, ../scss/_menu.scss */
+  nav a:hover,
+  nav a:focus,
+  nav ul li a:hover,
+  nav ul li a:focus {
+    color: #999;
   }
 }
 /**
