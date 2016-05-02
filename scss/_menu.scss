@@ -248,6 +248,15 @@
 // End of < md screen
 
 @media (min-width: $screen-md-min) {
+	.bt-menu-trigger {
+		font-size: 0px;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+	}
+
 	// Position of the navbar
 	nav {
 		position: fixed;
