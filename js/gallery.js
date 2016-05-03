@@ -1,5 +1,5 @@
   $(function(){
-		var zIndex= 2, endTop=0, endLeft=450;
+		var zIndex= 2, endTop=0, endLeft=300;
 
 		function randRotation(el){
 			var rot = Math.round( Math.random() * 90-45);
