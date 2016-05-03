@@ -23,3 +23,15 @@ a,
 a:focus {
 	outline: none;
 }
+
+// Media
+img,
+iframe {
+	border-radius: 10px;
+	margin: 5px;
+}
+
+// Captions, legends & co
+.legend {
+	font-size: 70%;
+}

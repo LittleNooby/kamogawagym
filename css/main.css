@@ -73,6 +73,18 @@ a:focus {
   outline: none;
 }
 
+/* line 28, ../scss/_general.scss */
+img,
+iframe {
+  border-radius: 10px;
+  margin: 5px;
+}
+
+/* line 35, ../scss/_general.scss */
+.legend {
+  font-size: 70%;
+}
+
 /**
   * This menu is hugely inspired from Mary Lou work, especially model 2 and 5
   * Source : http://tympanus.net/codrops/2013/09/30/animated-border-menus/
@@ -657,4 +669,9 @@ header h1 {
 header h1 span {
   font-size: 60%;
   display: block;
+}
+
+/* line 44, ../scss/_targeted.scss */
+#HOME img {
+  float: right;
 }
