@@ -469,6 +469,52 @@ iframe {
     color: #999;
   }
 }
+/* line 1, ../scss/_gallery.scss */
+.photogallery {
+  top: 150px;
+  left: 100px;
+  height: 300px;
+}
+
+/* line 6, ../scss/_gallery.scss */
+.photogallery li {
+  position: absolute;
+  display: block;
+  margin: 30px;
+  list-style-type: none;
+  padding: 10px 10px 30px 10px;
+  background: #fff;
+  border: solid black 1px;
+  -webkit-box-shadow: 2px 2px 4px #333333;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  -moz-box-shadow: 2px 2px 4px #333333;
+  -moz-transition: -moz-transform 0.5s ease;
+  box-shadow: 2px 2px 4px #333333;
+  transition: transform 0.5s ease;
+}
+
+/* line 21, ../scss/_gallery.scss */
+.photogallery li.active {
+  -webkit-transform: rotate(0deg) !important;
+  -moz-transform: rotate(0deg) !important;
+  transform: rotate(0deg) !important;
+}
+
+/* line 26, ../scss/_gallery.scss */
+.photogallery img {
+  display: block;
+  width: 160px;
+  -webkit-transition: width 0.75s;
+  -moz-transition: width 0.75s;
+  transition: width 0.75s;
+}
+
+/* line 33, ../scss/_gallery.scss */
+.photogallery .active img {
+  display: block;
+  width: 100%;
+}
+
 /**
   * This class is a mere adaptation of Mary Lou's work
   * Source : http://tympanus.net/codrops/2013/10/03/a-collection-of-separator-styles/
