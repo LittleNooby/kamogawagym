@@ -97,3 +97,15 @@ div.evenTitle {
 .panel-default {
 	border: $bgColor;
 }
+
+section#ABOUT > div.row > div,
+section#ABOUT > div.row > div > div.row > div {
+	padding: 0;
+}
+section#ABOUT > div.row > div > div.row {
+	margin: 0;
+}
+section#ABOUT h3 {
+	font-size: 120%;
+	margin-top: 10px;
+}

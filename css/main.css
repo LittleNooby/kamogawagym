@@ -771,3 +771,20 @@ div.evenTitle {
 .panel-default {
   border: #F2562E;
 }
+
+/* line 101, ../scss/_targeted.scss */
+section#ABOUT > div.row > div,
+section#ABOUT > div.row > div > div.row > div {
+  padding: 0;
+}
+
+/* line 105, ../scss/_targeted.scss */
+section#ABOUT > div.row > div > div.row {
+  margin: 0;
+}
+
+/* line 108, ../scss/_targeted.scss */
+section#ABOUT h3 {
+  font-size: 120%;
+  margin-top: 10px;
+}
