@@ -1,5 +1,5 @@
 /**
-  * This contain classes which affect only specific elements
+  * This contain rules which affect only few and specific elements
   */
 
 
@@ -43,4 +43,57 @@ header h1 span {
 
 #HOME img {
 	float: right;
+}
+
+#SERVICES h3 {
+	margin: 0;
+}
+div.oddTitle,
+div.evenTitle {
+	background: $bgColor;
+	border-radius: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 5px;
+}
+.oddTitle h3 {
+	text-align: left;
+}
+.evenTitle h3 {
+	text-align: right;
+}
+
+.oddTitle p {
+	text-align: right;
+}
+.evenTitle p {
+	text-align: left;
+}
+
+.vs {
+	padding: 30%;
+	font-size: 500%;
+}
+
+.carousel {
+	border-radius: 55px;
+	overflow: hidden;
+}
+.carousel-inner img {
+	margin: auto;
+}
+
+.panel-default > .panel-heading,
+.panel {
+	background: $bgColor;
+	background-color: $bgColor;
+}
+.panel-body > img {
+	float: left;
+}
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+	border-top: none;
+}
+.panel-default {
+	border: $bgColor;
 }

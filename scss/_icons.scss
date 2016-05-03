@@ -25,17 +25,36 @@
 }
 
 .icon-twitter:before {
-  content: "\f099";
+	content: "\f099";
 }
 
 .icon-gplus:before {
-  content: "\f0d5";
+	content: "\f0d5";
 }
 
 .icon-mail:before {
-  content: "\f003";
+	content: "\f003";
 }
 
 .icon-facebook:before {
-  content: "\f09a";
+	content: "\f09a";
+}
+
+.icon-left:before {
+	content: "\f053";
+}
+
+.icon-right:before {
+	content: "\f054";
+}
+
+.icon-left:before,
+.icon-right:before {
+	position: absolute;
+	display: block;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
