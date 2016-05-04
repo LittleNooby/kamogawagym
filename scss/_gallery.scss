@@ -39,40 +39,28 @@
 }
 
 // Alternative for responsive design
-.photolinks {
-	list-style-type: none;
+.gallery { 
+	text-align: center;
+ }
+.current-image-wrapper {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
-.photolinks li {
-	float: left;
+.current-image-wrapper img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  opacity: 1;
+  transition: opacity 1.85s;
 }
-.photolinks li h3 {
-	text-transform: uppercase;
+.current-image-wrapper .hideme {
+  opacity: 0;
+  transition: opacity 0s;
 }
-.photolinks li img {
-	max-width: 100%;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+.thumbnails li, .thumbnails a, .thumbnails img {
+  display: inline-block;
+  width: 4.5em;
+  height: 3em;
+  border: none;
 }
-@media only screen and (max-width : 992px),
-only screen and (max-device-width : 992px){
- .photolinks li {width: 21%;}
-}
- 
-@media only screen and (max-width : 720px),
-only screen and (max-device-width : 720px){
- .photolinks li {width: 29.33333%;}
-}
- 
-@media only screen and (max-width : 530px),
-only screen and (max-device-width : 530px){
- .photolinks li {width: 46%;}
-}
- 
-@media only screen and (max-width : 320px),
-only screen and (max-device-width : 320px){
- .photolinks li {width: 96%;}
- .photolinks li img {width: 96%;}
- .photolinks li h3 {font-size: 18px;}
- .photolinks li p, {font-size: 18px;}
-}
+.thumbnails a { outline: none; }

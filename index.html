@@ -312,13 +312,13 @@
 
 		<section id="GALLERY" class="color-separator halfcircle-separator">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12 col-sm-12 col-xs-12">
 					<h2>Gallery</h2>
 				</div>
 			</div>
 			<div class="row">
 				<!-- http://codepen.io/malko/pen/Eyxep -->
-				<div class="col-md-12">
+				<div class="col-md-12 col-sm-12 col-xs-12">
 					<ul class="photogallery">
 						<li draggable="true">
 							<img src="images/medium/boxing-push-ups.jpg" alt=""/>
@@ -345,32 +345,44 @@
 							<p>2 hours before the match</p>
 						</li>
 					</ul>
-					<ul class="photolinks">
-						<li>
-							<img src="images/medium/boxing-push-ups.jpg" alt=""/>
-							<p>Training can be interesting</p>
-						</li>
-						<li>
-							<img src="images/medium/mindset-of-a-champion.jpg" alt=""/>
-							<p>Will is the key</p>
-						</li>
-						<li>
-							<img src="images/medium/reflexes.jpg" alt=""/>
-							<p>Bro love</p>
-						</li>
-						<li>
-							<img src="images/medium/leftboxer.jpg" alt=""/>
-							<p>Takamura focus is unbearable</p>
-						</li>
-						<li>
-							<img src="images/medium/rope.jpg" alt=""/>
-							<p>April, two days before the belt match</p>
-						</li>
-						<li>
-							<img src="images/big/big-match.png" alt=""/>
-							<p>2 hours before the match</p>
-						</li>
-					</ul>
+					<div id='gallery' class='gallery'>
+					  <div id='lg-wrap' class='current-image-wrapper'>
+					    <img id='large' data-idx='0' src="images/medium/boxing-push-ups.jpg">
+					  </div>
+					  <ul id='thumbnails' class='thumbnails'>
+					    <li>
+					      <a href="images/medium/boxing-push-ups.jpg">
+						<img data-idx='0' src="images/small/boxing-push-ups.jpg">
+					      </a>
+					    </li><!--
+					    --><li>
+					      <a href="images/medium/mindset-of-a-champion.jpg">
+						<img data-idx='1' src="images/small/mindset-of-a-champion.jpg">
+					      </a>
+					    </li><!--
+					    --><li>
+					      <a href="images/medium/reflexes.jpg">
+						<img data-idx='2' src="images/small/reflexes.jpg">
+					      </a>
+					    </li><!--
+					    --><li>
+					      <a href="images/medium/leftboxer.jpg">
+						<img data-idx='3' src="images/small/leftboxer.jpg">
+					      </a>
+					    </li><!--
+					    --><li>
+					      <a href="images/medium/rope.jpg">
+						<img data-idx='4' src="images/small/rope.jpg">
+					      </a>
+					    </li><!--
+					    --><li>
+					      <a href="images/big/big-match.png">
+						<img data-idx='5' src="images/small/big-match.png">
+					      </a>
+					    </li>
+					  </ul>
+					</div>
+					<!-- gallery - END -->
 				</div>
 			</div>
 		</section>

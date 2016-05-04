@@ -529,67 +529,44 @@ a {
 }
 
 /* line 42, ../scss/_gallery.scss */
-.photolinks {
-  list-style-type: none;
+.gallery {
+  text-align: center;
 }
 
 /* line 45, ../scss/_gallery.scss */
-.photolinks li {
-  float: left;
+.current-image-wrapper {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
-/* line 48, ../scss/_gallery.scss */
-.photolinks li h3 {
-  text-transform: uppercase;
-}
-
-/* line 51, ../scss/_gallery.scss */
-.photolinks li img {
+/* line 49, ../scss/_gallery.scss */
+.current-image-wrapper img {
+  display: block;
   max-width: 100%;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  margin: 0 auto;
+  opacity: 1;
+  transition: opacity 1.85s;
 }
 
-@media only screen and (max-width: 992px), only screen and (max-device-width: 992px) {
-  /* line 59, ../scss/_gallery.scss */
-  .photolinks li {
-    width: 21%;
-  }
+/* line 56, ../scss/_gallery.scss */
+.current-image-wrapper .hideme {
+  opacity: 0;
+  transition: opacity 0s;
 }
-@media only screen and (max-width: 720px), only screen and (max-device-width: 720px) {
-  /* line 64, ../scss/_gallery.scss */
-  .photolinks li {
-    width: 29.33333%;
-  }
-}
-@media only screen and (max-width: 530px), only screen and (max-device-width: 530px) {
-  /* line 69, ../scss/_gallery.scss */
-  .photolinks li {
-    width: 46%;
-  }
-}
-@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
-  /* line 74, ../scss/_gallery.scss */
-  .photolinks li {
-    width: 96%;
-  }
 
-  /* line 75, ../scss/_gallery.scss */
-  .photolinks li img {
-    width: 96%;
-  }
-
-  /* line 76, ../scss/_gallery.scss */
-  .photolinks li h3 {
-    font-size: 18px;
-  }
-
-  /* line 77, ../scss/_gallery.scss */
-  .photolinks li p {
-    font-size: 18px;
-  }
+/* line 60, ../scss/_gallery.scss */
+.thumbnails li, .thumbnails a, .thumbnails img {
+  display: inline-block;
+  width: 4.5em;
+  height: 3em;
+  border: none;
 }
+
+/* line 66, ../scss/_gallery.scss */
+.thumbnails a {
+  outline: none;
+}
+
 /**
   * This class is a mere adaptation of Mary Lou's work
   * Source : http://tympanus.net/codrops/2013/10/03/a-collection-of-separator-styles/
@@ -943,7 +920,7 @@ section#ABOUT h3 {
 
 @media (min-width: 992px) {
   /* line 129, ../scss/_targeted.scss */
-  section#GALLERY .photolinks {
+  section#GALLERY .gallery {
     display: none;
   }
 }
