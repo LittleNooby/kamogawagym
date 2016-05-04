@@ -896,8 +896,13 @@ div.evenTitle {
 
 /* line 113, ../scss/_targeted.scss */
 section#NEWS .news-item {
-  width: 240px;
   margin: 0 auto;
+}
+@media (max-width: 991px) {
+  /* line 113, ../scss/_targeted.scss */
+  section#NEWS .news-item {
+    width: 240px;
+  }
 }
 
 /* line 118, ../scss/_targeted.scss */
