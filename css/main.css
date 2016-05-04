@@ -81,7 +81,7 @@
     transform: scale(1);
   }
   40% {
-    transform: scale(1.08);
+    transform: scale(1.04);
   }
   50% {
     transform: scale(1);
@@ -90,7 +90,7 @@
     transform: scale(1);
   }
   70% {
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
   80% {
     transform: scale(1);
@@ -119,8 +119,8 @@
 
 /* line 13, ../scss/_general.scss */
 body {
-  background: #F2562E;
-  color: #333;
+  background: #00BFFF;
+  color: #FFF;
   font-family: 'Lato', Arial, sans-serif;
 }
 
@@ -522,9 +522,10 @@ a {
   top: 150px;
   left: 100px;
   height: 300px;
+  color: black;
 }
 
-/* line 9, ../scss/_gallery.scss */
+/* line 10, ../scss/_gallery.scss */
 .photogallery li {
   position: absolute;
   display: block;
@@ -541,14 +542,14 @@ a {
   transition: transform 0.5s ease;
 }
 
-/* line 24, ../scss/_gallery.scss */
+/* line 25, ../scss/_gallery.scss */
 .photogallery li.active {
   -webkit-transform: rotate(0deg) !important;
   -moz-transform: rotate(0deg) !important;
   transform: rotate(0deg) !important;
 }
 
-/* line 29, ../scss/_gallery.scss */
+/* line 30, ../scss/_gallery.scss */
 .photogallery img {
   display: block;
   width: 160px;
@@ -557,24 +558,24 @@ a {
   transition: width 0.75s;
 }
 
-/* line 36, ../scss/_gallery.scss */
+/* line 37, ../scss/_gallery.scss */
 .photogallery .active img {
   display: block;
   width: 600px;
 }
 
-/* line 42, ../scss/_gallery.scss */
+/* line 43, ../scss/_gallery.scss */
 .gallery {
   text-align: center;
 }
 
-/* line 45, ../scss/_gallery.scss */
+/* line 46, ../scss/_gallery.scss */
 .current-image-wrapper {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
-/* line 49, ../scss/_gallery.scss */
+/* line 50, ../scss/_gallery.scss */
 .current-image-wrapper img {
   display: block;
   max-width: 100%;
@@ -583,13 +584,13 @@ a {
   transition: opacity 1.85s;
 }
 
-/* line 56, ../scss/_gallery.scss */
+/* line 57, ../scss/_gallery.scss */
 .current-image-wrapper .hideme {
   opacity: 0;
   transition: opacity 0s;
 }
 
-/* line 60, ../scss/_gallery.scss */
+/* line 61, ../scss/_gallery.scss */
 .thumbnails li, .thumbnails a, .thumbnails img {
   display: inline-block;
   width: 4.5em;
@@ -597,7 +598,7 @@ a {
   border: none;
 }
 
-/* line 66, ../scss/_gallery.scss */
+/* line 67, ../scss/_gallery.scss */
 .thumbnails a {
   outline: none;
 }
@@ -669,12 +670,12 @@ footer {
 /* Section color alternance */
 /* line 48, ../scss/_sections.scss */
 .color-separator:nth-child(odd) {
-  background: #F2562E;
+  background: #00BFFF;
 }
 
 /* line 51, ../scss/_sections.scss */
 .color-separator:nth-child(even) {
-  background: #ee3c0f;
+  background: #00a4db;
 }
 
 /* Common style for pseudo-elements */
@@ -731,7 +732,7 @@ section::after {
   top: -25px;
   background: inherit;
   box-shadow: -50px 50px 0, 50px -50px 0;
-  color: #F2562E;
+  color: #00BFFF;
 }
 
 /* line 104, ../scss/_sections.scss */
@@ -739,7 +740,7 @@ section::after {
   bottom: -25px;
   background: inherit;
   box-shadow: -50px 50px 0, 50px -50px 0;
-  color: #F2562E;
+  color: #00BFFF;
 }
 
 /* Half Circle */
@@ -795,7 +796,7 @@ section::after {
 .logo {
   margin: 0 auto;
   margin-top: 20px;
-  background: #F2562E;
+  background: #00BFFF;
   width: 200px;
   height: 200px;
   border-radius: 100px;
@@ -857,7 +858,7 @@ header h1 span {
 /* line 59, ../scss/_targeted.scss */
 div.oddTitle,
 div.evenTitle {
-  background: #F2562E;
+  background: #00BFFF;
   border-radius: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -910,8 +911,8 @@ div.evenTitle {
 /* line 98, ../scss/_targeted.scss */
 .panel-default > .panel-heading,
 .panel {
-  background: #F2562E;
-  background-color: #F2562E;
+  background: #00BFFF;
+  background-color: #00BFFF;
 }
 
 /* line 103, ../scss/_targeted.scss */
@@ -926,7 +927,7 @@ div.evenTitle {
 
 /* line 109, ../scss/_targeted.scss */
 .panel-default {
-  border: #F2562E;
+  border: #00BFFF;
 }
 
 /* line 113, ../scss/_targeted.scss */
