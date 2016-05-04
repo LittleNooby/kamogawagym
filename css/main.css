@@ -576,9 +576,14 @@ section {
 section > .row {
   text-align: left;
   margin: 0 auto;
-  width: 992px;
   display: inline-block;
   float: none;
+}
+@media (min-width: 992px) {
+  /* line 35, ../scss/_sections.scss */
+  section > .row {
+    width: 992px;
+  }
 }
 
 /* line 42, ../scss/_sections.scss */

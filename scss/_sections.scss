@@ -35,7 +35,7 @@ section {
 section > .row{
 	text-align: left; // because we don't want center from section
 	margin: 0 auto;
-	width: 992px;
+	@media (min-width: $screen-md-min) { width: 992px;}
 	display: inline-block;
 	float: none;
 }
