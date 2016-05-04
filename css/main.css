@@ -762,12 +762,20 @@ header h1 span {
   float: right;
 }
 
-/* line 48, ../scss/_targeted.scss */
+@media (max-width: 680px) {
+  /* line 47, ../scss/_targeted.scss */
+  #HOME iframe {
+    /* This is the point where it begins to lack space */
+    width: 100%;
+  }
+}
+
+/* line 53, ../scss/_targeted.scss */
 #SERVICES h3 {
   margin: 0;
 }
 
-/* line 51, ../scss/_targeted.scss */
+/* line 56, ../scss/_targeted.scss */
 div.oddTitle,
 div.evenTitle {
   background: #F2562E;
@@ -777,77 +785,77 @@ div.evenTitle {
   padding: 5px;
 }
 
-/* line 59, ../scss/_targeted.scss */
+/* line 64, ../scss/_targeted.scss */
 .oddTitle h3 {
   text-align: left;
 }
 
-/* line 62, ../scss/_targeted.scss */
+/* line 67, ../scss/_targeted.scss */
 .evenTitle h3 {
   text-align: right;
 }
 
-/* line 66, ../scss/_targeted.scss */
+/* line 71, ../scss/_targeted.scss */
 .oddTitle p {
   text-align: right;
 }
 
-/* line 69, ../scss/_targeted.scss */
+/* line 74, ../scss/_targeted.scss */
 .evenTitle p {
   text-align: left;
 }
 
-/* line 73, ../scss/_targeted.scss */
+/* line 78, ../scss/_targeted.scss */
 .vs {
   padding: 30%;
   font-size: 500%;
 }
 
-/* line 78, ../scss/_targeted.scss */
+/* line 83, ../scss/_targeted.scss */
 .carousel {
   border-radius: 55px;
   overflow: hidden;
 }
 
-/* line 82, ../scss/_targeted.scss */
+/* line 87, ../scss/_targeted.scss */
 .carousel-inner img {
   margin: auto;
 }
 
-/* line 86, ../scss/_targeted.scss */
+/* line 91, ../scss/_targeted.scss */
 .panel-default > .panel-heading,
 .panel {
   background: #F2562E;
   background-color: #F2562E;
 }
 
-/* line 91, ../scss/_targeted.scss */
+/* line 96, ../scss/_targeted.scss */
 .panel-body > img {
   float: left;
 }
 
-/* line 94, ../scss/_targeted.scss */
+/* line 99, ../scss/_targeted.scss */
 .panel-group .panel-heading + .panel-collapse > .panel-body {
   border-top: none;
 }
 
-/* line 97, ../scss/_targeted.scss */
+/* line 102, ../scss/_targeted.scss */
 .panel-default {
   border: #F2562E;
 }
 
-/* line 101, ../scss/_targeted.scss */
+/* line 106, ../scss/_targeted.scss */
 section#ABOUT > div.row > div,
 section#ABOUT > div.row > div > div.row > div {
   padding: 0;
 }
 
-/* line 105, ../scss/_targeted.scss */
+/* line 110, ../scss/_targeted.scss */
 section#ABOUT > div.row > div > div.row {
   margin: 0;
 }
 
-/* line 108, ../scss/_targeted.scss */
+/* line 113, ../scss/_targeted.scss */
 section#ABOUT h3 {
   font-size: 120%;
   margin-top: 10px;
