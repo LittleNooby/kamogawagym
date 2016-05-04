@@ -53,6 +53,9 @@ header h1 span {
 #SERVICES h3 {
 	margin: 0;
 }
+#SERVICES img {
+	width: 100%;
+}
 div.oddTitle,
 div.evenTitle {
 	background: $bgColor;
@@ -112,15 +115,12 @@ section#NEWS .news-item {
 	margin: 0 auto;
 }
 
-section#ABOUT > div.row > div,
-section#ABOUT > div.row > div > div.row > div {
-	padding: 0;
-}
-section#ABOUT > div.row > div > div.row {
-	margin: 0;
+section#ABOUT img {
+	float: right;
 }
 section#ABOUT h3 {
 	font-size: 120%;
 	margin-top: 10px;
 }
+
 
