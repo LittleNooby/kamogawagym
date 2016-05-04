@@ -851,17 +851,23 @@ div.evenTitle {
 }
 
 /* line 110, ../scss/_targeted.scss */
+section#NEWS .news-item {
+  width: 240px;
+  margin: 0 auto;
+}
+
+/* line 115, ../scss/_targeted.scss */
 section#ABOUT > div.row > div,
 section#ABOUT > div.row > div > div.row > div {
   padding: 0;
 }
 
-/* line 114, ../scss/_targeted.scss */
+/* line 119, ../scss/_targeted.scss */
 section#ABOUT > div.row > div > div.row {
   margin: 0;
 }
 
-/* line 117, ../scss/_targeted.scss */
+/* line 122, ../scss/_targeted.scss */
 section#ABOUT h3 {
   font-size: 120%;
   margin-top: 10px;

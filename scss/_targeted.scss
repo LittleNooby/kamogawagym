@@ -107,6 +107,11 @@ div.evenTitle {
 	border: $bgColor;
 }
 
+section#NEWS .news-item {
+	width: 240px;
+	margin: 0 auto;
+}
+
 section#ABOUT > div.row > div,
 section#ABOUT > div.row > div > div.row > div {
 	padding: 0;
