@@ -37,3 +37,42 @@
 	display:block;
 	width: 600px;
 }
+
+// Alternative for responsive design
+.photolinks {
+	list-style-type: none;
+}
+.photolinks li {
+	float: left;
+}
+.photolinks li h3 {
+	text-transform: uppercase;
+}
+.photolinks li img {
+	max-width: 100%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+@media only screen and (max-width : 992px),
+only screen and (max-device-width : 992px){
+ .photolinks li {width: 21%;}
+}
+ 
+@media only screen and (max-width : 720px),
+only screen and (max-device-width : 720px){
+ .photolinks li {width: 29.33333%;}
+}
+ 
+@media only screen and (max-width : 530px),
+only screen and (max-device-width : 530px){
+ .photolinks li {width: 46%;}
+}
+ 
+@media only screen and (max-width : 320px),
+only screen and (max-device-width : 320px){
+ .photolinks li {width: 96%;}
+ .photolinks li img {width: 96%;}
+ .photolinks li h3 {font-size: 18px;}
+ .photolinks li p, {font-size: 18px;}
+}

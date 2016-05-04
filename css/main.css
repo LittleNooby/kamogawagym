@@ -528,6 +528,68 @@ a {
   width: 600px;
 }
 
+/* line 42, ../scss/_gallery.scss */
+.photolinks {
+  list-style-type: none;
+}
+
+/* line 45, ../scss/_gallery.scss */
+.photolinks li {
+  float: left;
+}
+
+/* line 48, ../scss/_gallery.scss */
+.photolinks li h3 {
+  text-transform: uppercase;
+}
+
+/* line 51, ../scss/_gallery.scss */
+.photolinks li img {
+  max-width: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 992px), only screen and (max-device-width: 992px) {
+  /* line 59, ../scss/_gallery.scss */
+  .photolinks li {
+    width: 21%;
+  }
+}
+@media only screen and (max-width: 720px), only screen and (max-device-width: 720px) {
+  /* line 64, ../scss/_gallery.scss */
+  .photolinks li {
+    width: 29.33333%;
+  }
+}
+@media only screen and (max-width: 530px), only screen and (max-device-width: 530px) {
+  /* line 69, ../scss/_gallery.scss */
+  .photolinks li {
+    width: 46%;
+  }
+}
+@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
+  /* line 74, ../scss/_gallery.scss */
+  .photolinks li {
+    width: 96%;
+  }
+
+  /* line 75, ../scss/_gallery.scss */
+  .photolinks li img {
+    width: 96%;
+  }
+
+  /* line 76, ../scss/_gallery.scss */
+  .photolinks li h3 {
+    font-size: 18px;
+  }
+
+  /* line 77, ../scss/_gallery.scss */
+  .photolinks li p {
+    font-size: 18px;
+  }
+}
 /**
   * This class is a mere adaptation of Mary Lou's work
   * Source : http://tympanus.net/codrops/2013/10/03/a-collection-of-separator-styles/
@@ -870,4 +932,18 @@ section#ABOUT img {
 section#ABOUT h3 {
   font-size: 120%;
   margin-top: 10px;
+}
+
+@media (max-width: 991px) {
+  /* line 126, ../scss/_targeted.scss */
+  section#GALLERY .photogallery {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 129, ../scss/_targeted.scss */
+  section#GALLERY .photolinks {
+    display: none;
+  }
 }

@@ -123,4 +123,9 @@ section#ABOUT h3 {
 	margin-top: 10px;
 }
 
-
+section#GALLERY .photogallery {
+	@media (max-width: 991px) { display:none;}
+}
+section#GALLERY .photolinks {
+	@media (min-width: 992px) { display:none;}
+}
