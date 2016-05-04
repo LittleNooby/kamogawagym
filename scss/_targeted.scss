@@ -95,21 +95,6 @@ div.evenTitle {
 	margin: auto;
 }
 
-.panel-default > .panel-heading,
-.panel {
-	background: $bgColor;
-	background-color: $bgColor;
-}
-.panel-body > img {
-	float: left;
-}
-.panel-group .panel-heading + .panel-collapse > .panel-body {
-	border-top: none;
-}
-.panel-default {
-	border: $bgColor;
-}
-
 section#NEWS .news-item {
 	@media (max-width: 991px) { width: 240px;}
 	margin: 0 auto;
