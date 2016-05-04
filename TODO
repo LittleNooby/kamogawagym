@@ -2,10 +2,5 @@ BASIC
 	SELECT a menu entry should close the menu
 	ADD button to go UP UP UP
 LINEAR
-	VIDEO slider best moments
 	RESPONSIVE : lesser section padding
-	_section.scss box-shadow property should inherit parent background
 ENTHOUSIAST
-	ADD link top right to the manga with book icon
-	ADD "Menu" text but hide it for screen to small
-	subsetting icons file
