@@ -943,3 +943,10 @@ section#ABOUT h3 {
     display: none;
   }
 }
+
+/* line 118, ../scss/_targeted.scss */
+section#CONTACT form textarea,
+section#CONTACT form select,
+section#CONTACT form input {
+  color: black;
+}

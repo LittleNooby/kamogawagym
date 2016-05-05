@@ -114,3 +114,9 @@ section#GALLERY .photogallery {
 section#GALLERY .gallery {
 	@media (min-width: 992px) { display:none;}
 }
+
+section#CONTACT form textarea,
+section#CONTACT form select,
+section#CONTACT form input {
+	color: black;
+}
