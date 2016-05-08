@@ -60,5 +60,6 @@
 }
 
 .icon-map:before {
+	color: darken($highlightColor, 30%);
 	content: "\f041";
 }
