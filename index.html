@@ -352,12 +352,12 @@
 					<div class="col-md-6">
 						<div class="row">
 							<label for="name" class="col-md-4 col-xs-4">Name</label>
-							<input name="name" id="name" type="text" class="col-md-8 col-xs-8">
+							<input name="name" id="name" type="text" class="col-md-8 col-xs-8" required>
 						</div>
 
 						<div class="row">
 							<label for="email" class="col-md-4 col-xs-4">Email</label>
-							<input name="email" id="email" type="email" placeholder="address@domain.dom" class="col-md-8 col-xs-8">
+							<input name="email" id="email" type="email" placeholder="address@domain.dom" class="col-md-8 col-xs-8" required>
 						</div>
 
 						<div class="row">
@@ -377,8 +377,9 @@
 						</div>
 					</div>
 					<div class="col-md-6">
-						<input name="object" id="object" type="text" placeholder="Object of your message" class="col-md-12 col-xs-12">
-						<textarea id="message" name="message" cols="30" rows="6" placeholder="State your message here..." class="col-md-12 col-xs-12"></textarea>
+						<input name="object" id="object" type="text" placeholder="Object of your message" class="col-md-12 col-xs-12" required>
+						<textarea id="message" name="message" cols="30" rows="6" placeholder="State your message here..." class="col-md-12 col-xs-12" required></textarea>
+						<INPUT type="submit" name="send" Value="Send" class="col-md-12 col-xs-12">
 					</div>
 				</form>
 			</div>
