@@ -528,6 +528,7 @@ a {
 
 /* line 10, ../scss/_gallery.scss */
 .photogallery li {
+  cursor: pointer;
   position: absolute;
   display: block;
   margin: 30px;
@@ -543,14 +544,14 @@ a {
   transition: transform 0.5s ease;
 }
 
-/* line 25, ../scss/_gallery.scss */
+/* line 26, ../scss/_gallery.scss */
 .photogallery li.active {
   -webkit-transform: rotate(0deg) !important;
   -moz-transform: rotate(0deg) !important;
   transform: rotate(0deg) !important;
 }
 
-/* line 30, ../scss/_gallery.scss */
+/* line 31, ../scss/_gallery.scss */
 .photogallery img {
   display: block;
   width: 160px;
@@ -559,24 +560,24 @@ a {
   transition: width 0.75s;
 }
 
-/* line 37, ../scss/_gallery.scss */
+/* line 38, ../scss/_gallery.scss */
 .photogallery .active img {
   display: block;
   width: 600px;
 }
 
-/* line 43, ../scss/_gallery.scss */
+/* line 44, ../scss/_gallery.scss */
 .gallery {
   text-align: center;
 }
 
-/* line 46, ../scss/_gallery.scss */
+/* line 47, ../scss/_gallery.scss */
 .current-image-wrapper {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
-/* line 50, ../scss/_gallery.scss */
+/* line 51, ../scss/_gallery.scss */
 .current-image-wrapper img {
   display: block;
   max-width: 100%;
@@ -585,13 +586,13 @@ a {
   transition: opacity 1.85s;
 }
 
-/* line 57, ../scss/_gallery.scss */
+/* line 58, ../scss/_gallery.scss */
 .current-image-wrapper .hideme {
   opacity: 0;
   transition: opacity 0s;
 }
 
-/* line 61, ../scss/_gallery.scss */
+/* line 62, ../scss/_gallery.scss */
 .thumbnails li, .thumbnails a, .thumbnails img {
   display: inline-block;
   width: 4.5em;
@@ -599,7 +600,7 @@ a {
   border: none;
 }
 
-/* line 67, ../scss/_gallery.scss */
+/* line 68, ../scss/_gallery.scss */
 .thumbnails a {
   outline: none;
 }
